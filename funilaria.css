@@ -1,0 +1,76 @@
+/* PÁGINA DE FUNILARIA */
+#funilaria {
+    padding: 80px 0;
+}
+
+#funilaria .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.funilaria-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.funilaria-texto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.funilaria-texto h2 span {
+    color: #0095ff;
+}
+
+.funilaria-texto p {
+    color: #cfcfcf;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.funilaria-lista {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.funilaria-lista li {
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.funilaria-lista i {
+    color: #0095ff;
+}
+
+/* ETAPAS DA FUNILARIA */
+.funilaria-etapas {
+    background: #111;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.funilaria-etapas h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.funilaria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #funilaria .container {
+        grid-template-columns: 1fr;
+    }
+}

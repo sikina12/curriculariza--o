@@ -1,0 +1,392 @@
+/* RESET & CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #070707;
+    color: #FFF;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* CABEÇALHO */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header .container {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0095ff;
+}
+
+/* BOTÕES GERAIS */
+.btn-primary,
+.btn-secondary,
+.btn-menu {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-menu {
+    padding: 13px 30px;
+    border-radius: 30px;
+    background: #0095ff;
+    color: #fff;
+}
+
+.btn-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #0095ff;
+}
+
+.btn-primary {
+    padding: 18px 40px;
+    border-radius: 40px;
+    background: #0095ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #0095ff;
+}
+
+.btn-secondary {
+    padding: 18px 40px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* BANNER / HERO */
+.hero {
+    min-height: 100vh;
+    background: url("img/banner.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #d4d4d4;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* SEÇÃO SOBRE */
+#sobre {
+    padding: 120px 0;
+}
+
+#sobre .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.sobre-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.sobre-texto span {
+    color: #0095ff;
+    font-weight: 700;
+}
+
+.sobre-texto h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.sobre-texto p {
+    color: #cfcfcf;
+    line-height: 1.8;
+}
+
+/* SEÇÃO TRABALHOS / ESTRUTURA */
+#trabalhos {
+    padding: 120px 0;
+}
+
+#trabalhos h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #0095ff;
+    border-radius: 20px;
+}
+
+.slide {
+    width: 400px;
+    height: 280px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #1b1b1b;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    transition: 0.4s;
+}
+
+.slide:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 149, 255, 0.45);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* SEÇÃO SERVIÇOS */
+#servicos {
+    padding: 120px 0;
+    background: #0f0f0f;
+}
+
+#servicos h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 70px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: #181818;
+    padding: 45px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.35s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 35px rgba(0, 149, 255, 0.35);
+}
+
+.card i {
+    font-size: 55px;
+    color: #0095ff;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+.btn-detalhes {
+    color: #0095ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-detalhes:hover {
+    text-decoration: underline;
+}
+
+/* SEÇÃO CONTATO */
+#contato {
+    padding: 120px 0;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+#detalhe-servico {
+    padding: 140px 0 60px;
+}
+
+#detalhe-servico h1 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+#detalhe-servico p {
+    color: #cfcfcf;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+.btn-voltar {
+    color: #0095ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.servico-botao {
+    margin-top: 30px;
+}
+
+section {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    header .container {
+        height: 80px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .hero {
+        padding: 120px 20px 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .slide {
+        width: 90%;
+        height: 240px;
+    }
+}
