@@ -7,7 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="funilaria.css">
 </head>
 <body>
 
@@ -43,7 +43,8 @@
     <section id="funilaria">
         <div class="container">
             <div class="funilaria-img">
-                <img src="img/funilaria.jpg" alt="Serviço de Funilaria Automotiva">
+                <img src="img/funilaria_antes.jpeg" alt="Serviço de Funilaria Automotiva">
+                
             </div>
 
             <div class="funilaria-texto">
@@ -95,6 +96,31 @@
             <a href="https://wa.me/5518998230998" target="_blank" class="btn-primary">Falar com Especialista</a>
         </div>
     </section>
+
+    <section class="antes-depois">
+    <div class="container">
+
+        <h2>Antes e Depois</h2>
+        <p>Confira o resultado de um dos nossos trabalhos.</p>
+
+        <div class="carrossel">
+
+            <button class="anterior" onclick="anterior()">❮</button>
+
+            <img id="imagem-carrossel" src="img/funilaria_antes.jpeg" alt="Antes e depois de funilaria">
+            <img src="img/funilaria_depois.jpeg" alt="">
+
+            <button class="proximo" onclick="proximo()">❯</button>
+
+        </div>
+
+        <div class="indicadores">
+            <span class="ativo"></span>
+            <span></span>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>

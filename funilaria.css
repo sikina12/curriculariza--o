@@ -1,4 +1,108 @@
 /* PÁGINA DE FUNILARIA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #070707;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    height: 90px;
+    background: rgba(7, 7, 7, 0.95);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 170px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #0095ff;
+}
+
+.btn-menu,
+.btn-primary {
+    display: inline-block;
+    background: #0095ff;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-menu:hover,
+.btn-primary:hover {
+    background: #007acc;
+}
+
+/* TÍTULO DA PÁGINA */
+
+#detalhe-servico {
+    padding: 70px 0 50px;
+    text-align: center;
+}
+
+.btn-voltar {
+    display: inline-block;
+    color: #0095ff;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+#detalhe-servico h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+#detalhe-servico h1 span {
+    color: #0095ff;
+}
+
+#detalhe-servico p {
+    max-width: 850px;
+    margin: auto;
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+/* FUNILARIA */
+
 #funilaria {
     padding: 80px 0;
 }
@@ -6,7 +110,7 @@
 #funilaria .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -29,7 +133,7 @@
 .funilaria-texto p {
     color: #cfcfcf;
     line-height: 1.7;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .funilaria-lista {
@@ -39,7 +143,7 @@
 
 .funilaria-lista li {
     color: #fff;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -49,7 +153,8 @@
     color: #0095ff;
 }
 
-/* ETAPAS DA FUNILARIA */
+/* ETAPAS */
+
 .funilaria-etapas {
     background: #111;
     text-align: center;
@@ -63,14 +168,166 @@
 
 .funilaria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
     margin-top: 30px;
 }
 
+.card {
+    background: #181818;
+    padding: 35px 25px;
+    border-radius: 15px;
+}
+
+.card i {
+    font-size: 35px;
+    color: #0095ff;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #cfcfcf;
+    line-height: 1.6;
+}
+
+/* CONTATO */
+
+#contato {
+    text-align: center;
+    padding: 80px 0;
+}
+
+#contato h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
 /* RESPONSIVO */
+
 @media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #detalhe-servico h1 {
+        font-size: 34px;
+    }
+
     #funilaria .container {
         grid-template-columns: 1fr;
+    }
+
+    .funilaria-img img {
+        height: 300px;
+    }
+
+    .funilaria-texto h2 {
+        font-size: 30px;
+    }
+
+    .funilaria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ANTES E DEPOIS */
+
+.antes-depois {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.antes-depois h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.antes-depois p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.carrossel {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carrossel img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #0095ff;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.carrossel button:hover {
+    background: #007acc;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.proximo {
+    right: 15px;
+}
+
+.indicadores {
+    margin-top: 15px;
+}
+
+.indicadores span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.indicadores .ativo {
+    background: #0095ff;
+}
+
+@media (max-width: 768px) {
+    .carrossel img {
+        height: 300px;
     }
 }
