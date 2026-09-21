@@ -199,12 +199,12 @@ nav a:hover {
 
 .slider {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
     overflow-x: auto;
     width: 90%;
     margin: auto;
-    padding-bottom: 15px;
+    padding: 10px 10px 20px;
 }
 
 .slider::-webkit-scrollbar {
@@ -225,6 +225,9 @@ nav a:hover {
     background: #1b1b1b;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
     transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide:hover {
@@ -237,6 +240,7 @@ nav a:hover {
     height: 100%;
     object-fit: contain;
     object-position: center;
+    display: block;
 }
 
 /* SEÇÃO SERVIÇOS */

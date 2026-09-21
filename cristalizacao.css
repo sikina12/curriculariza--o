@@ -1,24 +1,143 @@
-/* PÁGINA DE CRISTALIZAÇÃO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #070707;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header .container {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0095ff;
+}
+
+.btn-menu {
+    padding: 13px 30px;
+    border-radius: 30px;
+    background: #0095ff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #0095ff;
+}
+
+/* DETALHE DO SERVIÇO */
+
+#detalhe-servico {
+    padding: 140px 0 40px;
+}
+
+.btn-voltar {
+    color: #0095ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #fff;
+}
+
+#detalhe-servico h1 {
+    font-size: 45px;
+    margin: 25px 0 15px;
+}
+
+#detalhe-servico h1 span {
+    color: #0095ff;
+}
+
+#detalhe-servico p {
+    color: #cfcfcf;
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+/* CRISTALIZAÇÃO */
+
 #cristalizacao {
-    padding: 80px 0;
+    padding: 80px 0 120px;
 }
 
 #cristalizacao .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
+}
+
+.cristalizacao-img {
+    width: 100%;
 }
 
 .cristalizacao-img img {
     width: 100%;
-    height: 380px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 15px;
+    object-position: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
 }
 
 .cristalizacao-texto h2 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
@@ -29,7 +148,7 @@
 .cristalizacao-texto p {
     color: #cfcfcf;
     line-height: 1.7;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .cristalizacao-lista {
@@ -49,28 +168,151 @@
     color: #0095ff;
 }
 
-/* ETAPAS DA CRISTALIZAÇÃO */
+/* BOTÃO */
+
+.btn-primary {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 40px;
+    background: #0095ff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #0095ff;
+}
+
+/* ETAPAS */
+
 .cristalizacao-etapas {
+    padding: 100px 0;
     background: #111;
-    text-align: center;
-    padding: 80px 0;
 }
 
 .cristalizacao-etapas h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
 }
 
 .cristalizacao-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cristalizacao-grid .card {
+    background: #1d1d1d;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.cristalizacao-grid .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 149, 255, 0.25);
+}
+
+.cristalizacao-grid .card i {
+    font-size: 45px;
+    color: #0095ff;
+    margin-bottom: 20px;
+}
+
+.cristalizacao-grid .card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.cristalizacao-grid .card p {
+    color: #cfcfcf;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CONTATO */
+
+#contato {
+    padding: 120px 0;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    color: #cfcfcf;
+    margin-bottom: 30px;
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+
+    header .container {
+        height: 80px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    #detalhe-servico {
+        padding-top: 120px;
+    }
+
     #cristalizacao .container {
         grid-template-columns: 1fr;
+    }
+
+    .cristalizacao-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cristalizacao-img img {
+        height: 320px;
+    }
+
+    #detalhe-servico h1 {
+        font-size: 35px;
+    }
+
+    .cristalizacao-texto h2 {
+        font-size: 32px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .btn-menu {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #detalhe-servico h1 {
+        font-size: 30px;
+    }
+
+    .cristalizacao-img img {
+        height: 260px;
+    }
+
+    .btn-primary {
+        padding: 14px 22px;
+        font-size: 14px;
     }
 }
