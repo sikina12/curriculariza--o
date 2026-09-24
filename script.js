@@ -139,3 +139,39 @@ if (menuMobile && menuLista) {
     });
 
 }
+//galeria
+
+const filtros = document.querySelectorAll(".filtro");
+const itensGaleria = document.querySelectorAll(".galeria-item");
+
+if (filtros.length > 0 && itensGaleria.length > 0) {
+
+    filtros.forEach(filtro => {
+
+        filtro.addEventListener("click", () => {
+
+            const categoria = filtro.dataset.filtro;
+
+            filtros.forEach(botao => {
+                botao.classList.remove("ativo");
+            });
+
+            filtro.classList.add("ativo");
+
+            itensGaleria.forEach(item => {
+
+                const categoriaItem = item.dataset.categoria;
+
+                if (categoria === "todos" || categoria === categoriaItem) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+
+            });
+
+        });
+
+        });
+
+}
