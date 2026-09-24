@@ -1,0 +1,529 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #070707;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: rgba(7, 7, 7, 0.85);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header .container {
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+}
+
+
+/* MENU */
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+}
+
+nav a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #0095ff;
+}
+
+
+/* BOTÃO ORÇAMENTO */
+
+.header-botoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.btn-menu {
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    background: #0095ff;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-menu:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 20px #0095ff;
+}
+
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* TOPO */
+
+.galeria-topo {
+    padding: 180px 0 80px;
+
+    background: #0b0b0b;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.galeria-topo span {
+    color: #0095ff;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+}
+
+.galeria-topo h1 {
+    font-size: 48px;
+
+    margin: 15px 0;
+}
+
+.galeria-topo p {
+    color: #cfcfcf;
+
+    max-width: 650px;
+
+    line-height: 1.8;
+}
+
+
+/* GALERIA */
+
+.galeria {
+    padding: 80px 0 120px;
+}
+
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 50px;
+}
+
+.filtro {
+    padding: 11px 20px;
+
+    border: 1px solid #333;
+
+    border-radius: 30px;
+
+    background: #111;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: 0.3s;
+}
+
+.filtro i {
+    margin-right: 6px;
+}
+
+.filtro:hover {
+    border-color: #0095ff;
+
+    color: #0095ff;
+}
+
+.filtro.ativo {
+    background: #0095ff;
+
+    border-color: #0095ff;
+
+    color: #fff;
+}
+
+
+/* GRID */
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.galeria-item {
+    height: 260px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #151515;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 25px rgba(0, 149, 255, 0.35);
+}
+
+.galeria-item img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background: #0d0d0d;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 70px 0 25px;
+}
+
+.footer-conteudo {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 50px;
+}
+
+.footer-logo img {
+    width: 170px;
+
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    color: #bdbdbd;
+
+    max-width: 400px;
+
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-contato {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-links h3,
+.footer-contato h3 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0095ff;
+}
+
+.footer-contato p {
+    color: #bdbdbd;
+
+    margin-bottom: 15px;
+}
+
+.footer-contato i {
+    color: #0095ff;
+
+    margin-right: 8px;
+}
+
+.footer-contato a {
+    color: #0095ff;
+
+    text-decoration: none;
+}
+
+.footer-baixo {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-baixo p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* WHATSAPP */
+
+.whats-flutuante {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #25d366;
+
+    color: #fff;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    text-decoration: none;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+.whats-flutuante:hover {
+    transform: scale(1.1);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    header .container {
+        height: 80px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #0d0d0d;
+
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    nav ul.menu-aberto {
+        display: flex;
+    }
+
+    .btn-menu {
+        padding: 10px 18px;
+
+        font-size: 14px;
+    }
+
+    .galeria-topo {
+        padding: 140px 0 60px;
+    }
+
+    .galeria-topo h1 {
+        font-size: 36px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-item {
+        height: 220px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 500px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item {
+        height: 250px;
+    }
+
+    .galeria-topo h1 {
+        font-size: 30px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo {
+        grid-column: auto;
+    }
+
+    .footer-baixo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .whats-flutuante {
+        width: 55px;
+
+        height: 55px;
+
+        right: 18px;
+
+        bottom: 18px;
+
+        font-size: 27px;
+    }
+
+}
