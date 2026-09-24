@@ -1,4 +1,4 @@
-/* RESET & CONFIGURAÇÕES GERAIS */
+ /* RESET & CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -45,6 +45,11 @@ header .container {
     width: 170px;
 }
 
+/* NAVEGAÇÃO */
+nav {
+    display: flex;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -60,6 +65,23 @@ nav a {
 
 nav a:hover {
     color: #0095ff;
+}
+
+/* BOTÕES DO CABEÇALHO */
+.header-botoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* MENU MOBILE */
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* BOTÕES GERAIS */
@@ -317,6 +339,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* DETALHES DOS SERVIÇOS */
 #detalhe-servico {
     padding: 140px 0 60px;
 }
@@ -343,6 +366,7 @@ nav a:hover {
     margin-top: 30px;
 }
 
+/* ANIMAÇÃO */
 section {
     animation: fadeUp 0.8s ease;
 }
@@ -352,23 +376,63 @@ section {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* CELULAR */
 @media (max-width: 900px) {
+
     header .container {
         height: 80px;
     }
 
-    nav {
-        display: none;
-    }
-
     .logo img {
         width: 140px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .header-botoes {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+        padding: 25px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    nav ul.menu-aberto {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .btn-menu {
+        padding: 10px 18px;
+        font-size: 14px;
     }
 
     .hero {
@@ -393,4 +457,168 @@ section {
         width: 90%;
         height: 240px;
     }
+}
+
+/* RODAPÉ */
+footer {
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 70px 0 25px;
+}
+
+.footer-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-logo img {
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    color: #bdbdbd;
+    max-width: 400px;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h3,
+.footer-contato h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0095ff;
+}
+
+.footer-contato p {
+    color: #bdbdbd;
+    margin-bottom: 15px;
+}
+
+.footer-contato i {
+    color: #0095ff;
+    margin-right: 8px;
+}
+
+.footer-contato a {
+    color: #0095ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-contato a:hover {
+    color: #fff;
+}
+
+.footer-baixo {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-baixo p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* RODAPÉ NO CELULAR */
+@media (max-width: 900px) {
+
+    .footer-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-logo {
+        grid-column: auto;
+    }
+
+    .footer-baixo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* WHATSAPP FLUTUANTE */
+.whats-flutuante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25d366;
+    color: #fff;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    text-decoration: none;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s;
+}
+
+.whats-flutuante:hover {
+    transform: scale(1.1);
+}
+
+/* CELULAR */
+@media (max-width: 500px) {
+
+    .whats-flutuante {
+        width: 55px;
+        height: 55px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 27px;
+    }
+
 }

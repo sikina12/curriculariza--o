@@ -120,3 +120,22 @@ if (imagemFunilaria) {
     }
 
 }
+
+const menuMobile = document.querySelector(".menu-mobile");
+const menuLista = document.querySelector("nav ul");
+
+if (menuMobile && menuLista) {
+
+    menuMobile.addEventListener("click", () => {
+        menuLista.classList.toggle("menu-aberto");
+    });
+
+    const linksMenu = menuLista.querySelectorAll("a");
+
+    linksMenu.forEach(link => {
+        link.addEventListener("click", () => {
+            menuLista.classList.remove("menu-aberto");
+        });
+    });
+
+}
