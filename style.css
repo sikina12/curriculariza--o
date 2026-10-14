@@ -296,7 +296,7 @@ nav a:hover {
 }
 
 
-.sobre-diferencial {
+.diferencial {
     background: #111;
 
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -309,7 +309,7 @@ nav a:hover {
 }
 
 
-.sobre-diferencial i {
+.diferencial i {
     color: #0095ff;
 
     font-size: 25px;
@@ -318,7 +318,7 @@ nav a:hover {
 }
 
 
-.sobre-diferencial h3 {
+.diferencial h3 {
     font-size: 15px;
 }
 
