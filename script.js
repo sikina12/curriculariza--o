@@ -417,3 +417,42 @@ if (
     });
 
 }
+
+// FORMULÁRIO DE ORÇAMENTO PELO WHATSAPP
+
+const formularioWhatsApp = document.getElementById(
+    "formulario-whatsapp"
+);
+
+if (formularioWhatsApp) {
+    formularioWhatsApp.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const nome = document.getElementById("nome-cliente").value.trim();
+        const telefone = document.getElementById("telefone-cliente").value.trim();
+        const veiculo = document.getElementById("veiculo-cliente").value.trim();
+        const servico = document.getElementById("servico-cliente").value;
+        const assunto = document.getElementById("assunto-cliente").value;
+        const mensagem = document.getElementById("mensagem-cliente").value.trim();
+
+        const numeroEmpresa = "5518998230998";
+
+        const texto = `Olá, Claudino Estética Automotiva!
+
+Gostaria de entrar em contato pelo site.
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Veículo:* ${veiculo}
+*Serviço:* ${servico}
+*Assunto:* ${assunto}
+
+*Detalhes da solicitação:*
+${mensagem}`;
+
+        const linkWhatsApp =
+            `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(texto)}`;
+
+        window.open(linkWhatsApp, "_blank");
+    });
+}

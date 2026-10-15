@@ -1095,3 +1095,95 @@ footer {
     }
 
 }
+
+/* FORMULÁRIO DE ORÇAMENTO PELO WHATSAPP */
+
+.orcamento-whatsapp {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #111111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.orcamento-whatsapp h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.orcamento-whatsapp p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 13px;
+    background-color: #080808;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: 2px solid #0095ff;
+    border-color: #0095ff;
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+.botao-whatsapp {
+    width: 100%;
+    padding: 15px;
+    background-color: #25D366;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+@media (max-width: 600px) {
+    .orcamento-whatsapp {
+        padding: 22px;
+        margin: 25px auto;
+    }
+
+    .orcamento-whatsapp h2 {
+        font-size: 25px;
+    }
+}
+
+

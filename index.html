@@ -597,36 +597,124 @@
     </section>
 
     <!-- CONTATO -->
+<section id="contato">
 
-    <section id="contato">
+    <div class="container">
 
-        <div class="container">
+        <span>
+            FALE CONOSCO
+        </span>
 
-            <span>
-                FALE CONOSCO
-            </span>
+        <h2>
+            Seu veículo merece um cuidado especial.
+        </h2>
 
-            <h2>
-                Seu veículo merece um cuidado especial.
-            </h2>
+        <p>
+            Fale com a Claudino Estética Automotiva e
+            solicite seu orçamento pelo WhatsApp.
+        </p>
 
-            <p>
-                Fale com a Claudino Estética Automotiva e
-                solicite seu orçamento pelo WhatsApp.
-            </p>
+        <a href="https://wa.me/5518998230998"
+            class="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer">
 
-            <a href="https://wa.me/5518998230998"
-                class="btn-primary"
-                target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
 
+            Falar pelo WhatsApp
+        </a>
+
+    </div>
+
+    <!-- FORMULÁRIO DE ORÇAMENTO -->
+
+    <div class="orcamento-whatsapp">
+
+        <h2>Solicite seu orçamento</h2>
+
+        <p>
+            Preencha os dados do seu veículo e envie
+            sua solicitação diretamente pelo WhatsApp.
+        </p>
+
+        <form id="formulario-whatsapp">
+
+            <div class="campo-formulario">
+                <label for="nome-cliente">Seu nome</label>
+                <input
+                    type="text"
+                    id="nome-cliente"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="telefone-cliente">Seu telefone</label>
+                <input
+                    type="tel"
+                    id="telefone-cliente"
+                    name="telefone"
+                    placeholder="(18) 99999-9999"
+                    required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="veiculo-cliente">Seu veículo</label>
+                <input
+                    type="text"
+                    id="veiculo-cliente"
+                    name="veiculo"
+                    placeholder="Ex.: Honda Civic 2022"
+                    required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="servico-cliente">Serviço desejado</label>
+                <select id="servico-cliente" name="servico" required>
+                    <option value="">Selecione um serviço</option>
+                    <option value="Funilaria">Funilaria</option>
+                    <option value="Pintura automotiva">Pintura automotiva</option>
+                    <option value="Polimento">Polimento</option>
+                    <option value="Cristalização">Cristalização</option>
+                    <option value="Vitrificação">Vitrificação</option>
+                    <option value="Higienização">Higienização</option>
+                    <option value="Outro serviço">Outro serviço</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="assunto-cliente">Assunto</label>
+                <select id="assunto-cliente" name="assunto" required>
+                    <option value="">Selecione o assunto</option>
+                    <option value="Solicitar orçamento">Solicitar orçamento</option>
+                    <option value="Agendar um serviço">Agendar um serviço</option>
+                    <option value="Tirar uma dúvida">Tirar uma dúvida</option>
+                    <option value="Consultar um serviço">Consultar um serviço</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="mensagem-cliente">Descreva o que precisa</label>
+                <textarea
+                    id="mensagem-cliente"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Conte o que aconteceu com seu veículo..."
+                    required></textarea>
+            </div>
+
+            <button type="submit" class="botao-whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
+                Enviar pelo WhatsApp
+            </button>
 
-                Falar pelo WhatsApp
-            </a>
+        </form>
 
-        </div>
+    </div>
 
-    </section>
+</section>
+
 
     <!-- WHATSAPP FLUTUANTE -->
 
